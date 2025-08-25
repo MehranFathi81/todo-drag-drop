@@ -1,0 +1,589 @@
+/* --------------------- Reset Css --------------------- **/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* --------------------------- Root ------------------------- */
+
+:root {
+  --bg-color: #f0f0f0;
+  --section-color: #ffffff;
+  --text-color: #000000;
+  /* هشدار: #facc15 */
+  /* اخطار: #ef4444 */
+  /* رنگ پیشنهادی: #3b82f6 */
+  --toast-message-color: #22c55e;
+}
+
+:root .dark {
+  --bg-color: #333333;
+  --section-color: #555555;
+  --text-color: #ffffff;
+}
+
+/* --------------------- Helper Class Css --------------------- */
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-danger {
+  background-color: #e53935;
+}
+
+.btn-danger:hover {
+  background-color: #c62828;
+}
+
+.btn-success {
+  background-color: #43a047;
+}
+
+.btn-success:hover {
+  background-color: #2e7d32;
+}
+
+/* --------------------- App Css --------------------- */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  height: 100vh;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+button {
+  font-size: 1.6rem;
+  color: #fff;
+}
+.container {
+  width: 80%;
+  height: 80%;
+  border-radius: 2rem;
+  background-color: var(--section-color);
+  /* position: relative; */
+}
+
+/* -------------------------- Header -------------------------- */
+
+.header {
+  width: 100%;
+  height: 10%;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+/* ------------------------ Header Btns ------------------------ */
+
+.header__create-btn {
+  width: 15rem;
+}
+.header__create-btn svg {
+  width: 3rem;
+  height: 3rem;
+  display: none;
+}
+.header__theme-btn {
+  width: 5rem;
+}
+.header__create-btn,
+.header__theme-btn {
+  cursor: pointer;
+  height: 5rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border: none;
+  border-radius: 10rem;
+  /* font-size: 2rem; */
+}
+
+.header__icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.header__create-btn svg path,
+.header__icon path {
+  stroke: var(--text-color);
+}
+
+/* ---------------------------- Main ---------------------------- */
+
+.main {
+  width: 100%;
+  height: 90%;
+  margin-bottom: 1rem;
+  justify-content: space-evenly;
+}
+
+/* --------------------- Main Sections --------------------- */
+
+.main-section {
+  width: 33%;
+  height: 100%;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.main-section__header {
+  width: 100%;
+  height: 8%;
+  font-size: 2.5rem;
+  background-color: var(--bg-color);
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.main-section__body {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 92%;
+  overflow: auto;
+}
+.main-section__body-title {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 2.5rem;
+  opacity: 0.6;
+  margin-top: 3rem;
+}
+/* --------------------- Sections Todo --------------------- */
+.todo {
+  cursor: pointer;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  background-color: var(--section-color);
+  border-radius: 1rem;
+}
+
+.todo__header {
+  justify-content: space-between;
+}
+
+.todo__wrapper {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.todo__title {
+  width: 100%;
+  border-radius: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  overflow:auto;
+  white-space: wrap;
+}
+
+.todo__btn {
+  cursor: pointer;
+  width: 100%;
+  height: 3.5rem;
+  border: none;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.todo__date {
+  text-align: center;
+  opacity: 0.7;
+}
+/* --------------------- Toast Message --------------------- */
+.toast {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: auto;
+  height: 7rem;
+  z-index: 12;
+}
+.success {
+  --toast-message-color: #22c55e;
+}
+.info {
+  --toast-message-color: #3b82f6;
+}
+.danger {
+  --toast-message-color: #ef4444;
+}
+/* --------------------- Toast Content --------------------- */
+.toast__content {
+  border-radius: 1rem 1rem 0 1rem;
+  background-color: var(--section-color);
+  height: 90%;
+  min-width: 30rem;
+  width: fit-content;
+  justify-content: flex-start;
+}
+/* --------------------- Toast Icons --------------------- */
+.toast__icons {
+  border-radius: 1rem 0 0 0;
+  height: 100%;
+  width: 20%;
+  border-left: 1rem solid var(--toast-message-color);
+}
+/* --------------------- Toast Icon --------------------- */
+.toast__icon {
+  width: 4rem;
+  height: 4rem;
+  padding: 0.4rem;
+  border-radius: 5rem;
+  margin-left: 1rem;
+  fill: #fff;
+  background-color: var(--toast-message-color);
+}
+.toast__icon--success {
+  fill: none;
+}
+.toast__icon--success path {
+  stroke: #fff;
+}
+.toast__icon--info {
+  padding: 0.8rem;
+}
+/* --------------------- Toast Message --------------------- */
+.toast__message {
+  white-space: nowrap;
+  margin: auto 2rem;
+  font-size: 1.8rem;
+}
+/* --------------------- Toast Process Bar --------------------- */
+.toast__process-bar {
+  height: 10%;
+  width: auto;
+  background-color: var(--section-color);
+  border-radius: 0 0 1rem 1rem;
+}
+.toast__process {
+  height: 100%;
+  width: 100%;
+  background-color: var(--toast-message-color);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+/* --------------------- Modal Screen --------------------- */
+.modal-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 11;
+  background-color: var(--bg-color);
+}
+/* --------------------- Modal Screen box --------------------- */
+.modal-screen__box {
+  width: 360px;
+  height: 20%;
+  background-color: var(--section-color);
+  border-radius: 1rem;
+}
+
+/* --------------------- Modal Screen Header --------------------- */
+
+.modal-screen__header {
+  width: 100%;
+  height: 15%;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.modal-screen__header button {
+  cursor: pointer;
+  height: 100%;
+  border: none;
+  background-color: var(--section-color);
+  border-radius: 1rem;
+}
+
+.modal-screen__header button svg {
+  width: 100%;
+  height: 100%;
+  fill: #e53935;
+}
+
+.modal-screen__header span {
+  padding-left: 1rem;
+}
+
+/* --------------------- Modal Screen Body --------------------- */
+
+.modal-screen__body {
+  position: relative;
+  width: 100%;
+  height: 85%;
+}
+
+.modal-screen__body > div:first-child {
+  height: 80%;
+}
+
+.modal-screen__input {
+  width: 85%;
+  height: 3.8rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border: none;
+}
+
+/* --------------------- Modal Screen Btns --------------------- */
+
+.modal-screen__btns {
+  position: absolute;
+  bottom: 0;
+  height: 20%;
+  width: 100%;
+}
+
+.modal-screen__cancel-btn {
+  border-bottom-left-radius: 1rem;
+}
+.modal-screen__create-btn {
+  border-bottom-right-radius: 1rem;
+}
+
+.modal-screen__cancel-btn,
+.modal-screen__create-btn {
+  cursor: pointer;
+  width: 50%;
+  height: 3.5rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #fff;
+  border: none;
+}
+
+/* --------------------- Media Query --------------------- */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+    height: 95%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body,
+  button {
+    font-size: 1.6rem !important;
+  }
+  .main-section__header,
+  .main-section__body-title {
+    font-size: 2rem;
+  }
+  .todo__title {
+  width: 100%;
+  border-radius: 1rem;
+  font-size: 1.7rem;
+  text-align: center;
+  overflow:auto;
+  white-space: wrap;
+}
+.todo__date{
+  font-size: 1.4rem;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  /* ---------------------------- Main ---------------------------- */
+  .main {
+    width: 100%;
+    height: 95%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-section {
+    width: 100%;
+    max-height: 30%;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    border-radius: 1rem;
+  }
+  .main-section__header {
+    height: 4rem;
+  }
+
+  /* -------------------------- Header -------------------------- */
+  .header {
+    width: 100%;
+    height: 7%;
+    padding: 0;
+    justify-content: space-between;
+  }
+  .header__create-btn {
+    width: 5rem;
+  }
+  .header__create-btn span {
+    display: none;
+  }
+  .header__create-btn svg {
+    display: block;
+  }
+}
+@media screen and (max-width: 576px) {
+    /* -------------------------- Toast -------------------------- */
+  .toast {
+    right: 1.5rem;
+    width: fit-content;
+  }
+  .toast__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .toast__content {
+    min-width: 100%;
+    width: 100%;
+  }
+  .toast__message {
+    white-space: wrap;
+    margin: auto 1rem;
+    font-size: 1.6rem;
+  }
+}
