@@ -315,9 +315,6 @@ function moveTodoBetweenLevels(fromLevel, toLevel, todoId) {
   const from = todosMap[+fromLevel];
   const to = todosMap[+toLevel];
   
-  console.log(from.arr);
-  console.log(from);
-  
   const index = from.arr.findIndex(function(todo){
    return todo.todoId === todoId
   })  
