@@ -41,7 +41,7 @@ todo-list-drag-drop/
 1. Clone the repo:
 ```bash
 git clone https://github.com/mehranfathi81/todo-drag-drop.git
-cd todo-drag-drop
+cd todo-list-drag-drop
 ```
 Open index.html in your browser (or serve it locally):
 
