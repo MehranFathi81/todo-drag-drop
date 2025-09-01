@@ -40,8 +40,8 @@ todo-list-drag-drop/
 ## 🛠️ Installation & Usage (Quick)
 1. Clone the repo:
 ```bash
-git clone https://github.com/<your-username>/todo-drag-drop.git
-cd todo-list-drag-drop
+git clone https://github.com/mehranfathi81/todo-drag-drop.git
+cd todo-drag-drop
 ```
 Open index.html in your browser (or serve it locally):
 
